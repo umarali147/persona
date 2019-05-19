@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="{{ app()->getLocale() }}" lang="{{ app()->getLocale() }}">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"
+    name="viewport" />
+  <title>Test Persona</title>
+  <meta name="description" content="Test task" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Test Persona" />
+  <meta property="og:description" content="" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" crossorigin="anonymous">
+  <link
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="apple-touch-icon" sizes="180x180"
+    href="https://cdn4.iconfinder.com/data/icons/new-google-logo-2015/400/new-google-favicon-512.png" />
+  <meta name="theme-color" content="#0fac9e" />
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen" />
+</head>
+
+<body id="app-body">
+  <div class="nav" id="main__header">
+    <div class="nav__inner">
+      <div class="row">
+        <div class="col-4 ">
+          <div class="profile__container">
+            <div class="profile_elements profile-icons">
+              <span><i class="fas fa-user"></i></span>
+            </div>
+            <div class="profile_elements profile-text">
+              <span> Personna <span id="header_real_persona_name"></span></span>
+            </div>
+            <div class="profile_elements profile-icons-small">
+              <span><i class="far fa-edit"></i></span>
+            </div>
+          </div>
+        </div>
+        <div class="col-8 right-nav-profile-container">
+          <div class="profile__container_right nav-right-actions">
+            <div class="nav-right-actions-element">
+              <div class="action-icons">
+                <span><i class="fas fa-save"></i></span>
+              </div>
+              <div class="action-text">
+                <span>Save</span>
+              </div>
+            </div>
+            <div class="nav-right-actions-element">
+              <div class="action-icons">
+                <span><i class="fas fa-plus-square"></i></span>
+              </div>
+              <div class="action-text">
+                <span>Add Elements</span>
+              </div>
+            </div>
+            <div class="nav-right-actions-element">
+              <div class="action-icons">
+                <span><i class="fas fa-share"></i></span>
+              </div>
+              <div class="action-text">
+                <span>Export</span>
+              </div>
+            </div>
+            <div class="nav-right-actions-element">
+              <div class="action-icons">
+                <span><i class="fas fa-copy"></i></span>
+              </div>
+              <div class="action-text">
+                <span>Duplicate</span>
+              </div>
+            </div>
+            <div class="nav-right-actions-element">
+              <div class="action-icons">
+                <span><i class="fas fa-long-arrow-alt-right"></i></span>
+              </div>
+              <div class="action-text">
+                <span>Move</span>
+              </div>
+            </div>
+            <div class="nav-right-actions-element">
+              <div class="action-icons">
+                <span><i class="fas fa-question-circle"></i></span>
+              </div>
+              <div class="action-text">
+                <span>Help</span>
+              </div>
+            </div>
+            <div class="nav-right-actions-element">
+              <div class="action-icons">
+                <span><i class="fas fa-ellipsis-h"></i></span>
+              </div>
+              <div class="action-text">
+                <span>More actions</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="main-container">
+    <div class="profile-area">
+            <div class="container">
+                <div class="main_content_header_container">
+                    <div class="main__content__header">
+                        <div class="avatar__cont">
+                            <div class="color__cont">
+                                <div class="avatar"></div>
+                            </div>
+                        </div>
+                        <div class="desc__cont">
+                            <div class="heading">
+                              persona name
+                            </div>
+                            <div class="desc" id="real_persona_name" contenteditable="true">
+                             
+                            </div>
+                        </div>
+                        <div class="shortname__cont">
+                            <div class="heading">
+                              short name
+                            </div>
+                            <div class="desc " id="persona_initials" contenteditable="true">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main__content__body">
+                    <div class="main__content__body__left droppable sortable">
+                    
+                        <!-- <div class="persona__container container " field-type="image" title="image field">
+                            <div class="persona__header__section handle">
+                                <div class="persona__header__text">
+                                    Image
+                                </div>
+                                <div class="persona__trash__icon">
+                                    <i class="fa fa-trash delete_element"></i>
+                                </div>
+                            </div>
+                            <div class="persona__body__section">
+                                <div class="image__section">
+                                    <img src="https://cdn1.alphr.com/sites/alphr/files/2018/02/how_to_delete_your_plenty_of_fish_account.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                     
+
+                        <div class="persona__container container" field-type="short_text" title="text field">
+                            <div class="persona__header__section handle">
+                                <div class="persona__header__text">
+                                    age
+                                </div>
+                                <div class="persona__trash__icon">
+                                    <i class="fa fa-trash delete_element"></i>
+                                </div>
+                            </div>
+                            <div class="persona__body__section">
+                                <div>
+                                    17
+                                </div>
+                            </div>
+                        </div> -->
+
+                    </div>
+                    <div class="main__content__body__right droppable sortable">
+                      <!-- <div class="persona__container container " field-type="image" title="image field">
+                        <div class="persona__header__section <handle>">
+                          <div class="persona__header__text">
+                            Image
+                          </div>
+                          <div class="persona__trash__icon">
+                            <i class="fa fa-trash delete_element"></i>
+                          </div>
+                        </div>
+                        <div class="persona__body__section">
+                          <div class="image__section">
+                            <label for="image">
+                              <i class="far fa-image fa-10x image_placeholder"></i> </label>
+                            
+                          </div>
+                        </div>
+                      </div> -->
+                    
+                      <!-- text -->
+                    
+                      <!-- <div class="persona__container container " field-type="short_text" title="text field">
+                        <div class="persona__header__section handle">
+                          <div class="persona__header__text">
+                            age
+                          </div>
+                          <div class="persona__trash__icon">
+                            <i class="fa fa-trash delete_element"></i>
+                          </div>
+                        </div>
+                        <div class="persona__body__section">
+                          <div>
+                            17
+                          </div>
+                        </div>
+                      </div> -->
+                    
+                      <!-- <div class="persona__container container" field-type="short_text" title="text field">
+                        <div class="persona__header__section handle">
+                          <div class="persona__header__text">
+                            Gender
+                          </div>
+                          <div class="persona__trash__icon">
+                            <i class="fa fa-trash delete_element"></i>
+                          </div>
+                        </div>
+                        <div class="persona__body__section">
+                          <div>
+                            Not defined
+                          </div>
+                        </div>
+                      </div> -->
+                    </div>
+                </div>
+            </div>
+
+
+    </div>
+    <div class="right-side-bar">
+      <div class="heading">
+          <div class="heading__text dib">Add Element</div>
+          <div class="close dib"><i class="fas fa-times"></i></div>
+      </div>
+      <div class="dbo">
+        <div class="desc">Add element to persona</div>
+        <div class="info__text">click or drag & drop one of the elements below to  add it to the persona.<br>click on the <span><i class="fas fa-cog"></i></span> icon of the each element to edit its settings.you can reorder the elements by dragging them</div>
+        <div class="action__cards">
+          <div class="card__wrapper draggable" title="Text field" field-type="short_text">
+            <div class="card " >
+              <div class="card__body">Abc</div>
+              <div class="card__footer">short text</div>
+            </div>
+          </div>
+          <div class="card__wrapper draggable" title="Text field" field-type="long_text">
+            <div class="card " >
+              <div class="card__body">Abc</div>
+              <div class="card__footer">Long text</div>
+            </div>
+          </div>
+          <div class="card__wrapper draggable " title="Text field" field-type="image">
+            <div class="card " >
+              <div class="card__body"><i class="far fa-image"></i></div>
+              <div class="card__footer">Image</div>
+            </div>
+          </div>
+          <div class="card__wrapper draggable" title="Text field" field-type="image_gallery">
+            <div class="card " >
+              <div class="card__body"><i class="far fa-images"></i></div>
+              <div class="card__footer">Gallery</div>
+            </div>
+          </div>
+          <div class="card__wrapper draggable" title="Text field" field-type="number">
+            <div class="card " >
+              <div class="card__body">123</div>
+              <div class="card__footer">Number</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="js/scripts.js"> </script>
+</body>
+
+</html>
